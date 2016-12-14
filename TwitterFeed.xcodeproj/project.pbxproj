@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		77219F3C1E00891E00CEF2BE /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 77219F3A1E00891E00CEF2BE /* Model.xcdatamodeld */; };
 		777792E01E004282004BF261 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777792DF1E004282004BF261 /* AppDelegate.swift */; };
-		777792E21E004282004BF261 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777792E11E004282004BF261 /* ViewController.swift */; };
+		777792E21E004282004BF261 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777792E11E004282004BF261 /* LoginViewController.swift */; };
 		777792E51E004282004BF261 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 777792E31E004282004BF261 /* Main.storyboard */; };
 		777792E71E004282004BF261 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 777792E61E004282004BF261 /* Assets.xcassets */; };
 		777792EA1E004282004BF261 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 777792E81E004282004BF261 /* LaunchScreen.storyboard */; };
 		777792F51E004282004BF261 /* TwitterFeedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777792F41E004282004BF261 /* TwitterFeedTests.swift */; };
 		777793001E004282004BF261 /* TwitterFeedUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777792FF1E004282004BF261 /* TwitterFeedUITests.swift */; };
+		7777930E1E004F55004BF261 /* OAuthiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7777930D1E004F55004BF261 /* OAuthiOS.framework */; };
+		777793111E006E58004BF261 /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777793101E006E58004BF261 /* TimelineViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		77219F3B1E00891E00CEF2BE /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		777792DC1E004282004BF261 /* TwitterFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		777792DF1E004282004BF261 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		777792E11E004282004BF261 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		777792E11E004282004BF261 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		777792E41E004282004BF261 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		777792E61E004282004BF261 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		777792E91E004282004BF261 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +51,9 @@
 		777792FB1E004282004BF261 /* TwitterFeedUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwitterFeedUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		777792FF1E004282004BF261 /* TwitterFeedUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterFeedUITests.swift; sourceTree = "<group>"; };
 		777793011E004282004BF261 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7777930D1E004F55004BF261 /* OAuthiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OAuthiOS.framework; path = TwitterFeed/OAuthiOS.framework; sourceTree = "<group>"; };
+		7777930F1E0052E0004BF261 /* TwitterFeed-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "TwitterFeed-Bridging-Header.h"; path = "TwitterFeed/TwitterFeed-Bridging-Header.h"; sourceTree = "<group>"; };
+		777793101E006E58004BF261 /* TimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7777930E1E004F55004BF261 /* OAuthiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +85,8 @@
 		777792D31E004282004BF261 = {
 			isa = PBXGroup;
 			children = (
+				7777930F1E0052E0004BF261 /* TwitterFeed-Bridging-Header.h */,
+				7777930D1E004F55004BF261 /* OAuthiOS.framework */,
 				777792DE1E004282004BF261 /* TwitterFeed */,
 				777792F31E004282004BF261 /* TwitterFeedTests */,
 				777792FE1E004282004BF261 /* TwitterFeedUITests */,
@@ -98,11 +108,13 @@
 			isa = PBXGroup;
 			children = (
 				777792DF1E004282004BF261 /* AppDelegate.swift */,
-				777792E11E004282004BF261 /* ViewController.swift */,
+				777792E11E004282004BF261 /* LoginViewController.swift */,
+				777793101E006E58004BF261 /* TimelineViewController.swift */,
 				777792E31E004282004BF261 /* Main.storyboard */,
 				777792E61E004282004BF261 /* Assets.xcassets */,
 				777792E81E004282004BF261 /* LaunchScreen.storyboard */,
 				777792EB1E004282004BF261 /* Info.plist */,
+				77219F3A1E00891E00CEF2BE /* Model.xcdatamodeld */,
 			);
 			path = TwitterFeed;
 			sourceTree = "<group>";
@@ -259,8 +271,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				777792E21E004282004BF261 /* ViewController.swift in Sources */,
+				777792E21E004282004BF261 /* LoginViewController.swift in Sources */,
 				777792E01E004282004BF261 /* AppDelegate.swift in Sources */,
+				777793111E006E58004BF261 /* TimelineViewController.swift in Sources */,
+				77219F3C1E00891E00CEF2BE /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +374,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "TwitterFeed/TwitterFeed-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -402,6 +417,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "TwitterFeed/TwitterFeed-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -412,6 +428,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TwitterFeed",
+				);
 				INFOPLIST_FILE = TwitterFeed/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.laurenjarrard.TwitterFeed;
@@ -424,6 +444,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TwitterFeed",
+				);
 				INFOPLIST_FILE = TwitterFeed/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.laurenjarrard.TwitterFeed;
@@ -505,6 +529,7 @@
 				777793061E004282004BF261 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		777793071E004282004BF261 /* Build configuration list for PBXNativeTarget "TwitterFeedTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +538,7 @@
 				777793091E004282004BF261 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7777930A1E004282004BF261 /* Build configuration list for PBXNativeTarget "TwitterFeedUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,8 +547,22 @@
 				7777930C1E004282004BF261 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		77219F3A1E00891E00CEF2BE /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				77219F3B1E00891E00CEF2BE /* Model.xcdatamodel */,
+			);
+			currentVersion = 77219F3B1E00891E00CEF2BE /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 777792D41E004282004BF261 /* Project object */;
 }
