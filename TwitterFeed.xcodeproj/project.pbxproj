@@ -21,6 +21,7 @@
 		77BF4F771E01EFF000473E3F /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77BF4F731E01EFF000473E3F /* TwitterKit.framework */; };
 		77BF4F781E01EFF000473E3F /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 77BF4F741E01EFF000473E3F /* TwitterKitResources.bundle */; };
 		77BF4F791E01EFF000473E3F /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77BF4F751E01EFF000473E3F /* TwitterCore.framework */; };
+		77BF4F7B1E0224A900473E3F /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BF4F7A1E0224A900473E3F /* Tweet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		77BF4F731E01EFF000473E3F /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
 		77BF4F741E01EFF000473E3F /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = "<group>"; };
 		77BF4F751E01EFF000473E3F /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterCore.framework; sourceTree = "<group>"; };
+		77BF4F7A1E0224A900473E3F /* Tweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 				777792E81E004282004BF261 /* LaunchScreen.storyboard */,
 				777792EB1E004282004BF261 /* Info.plist */,
 				77219F3A1E00891E00CEF2BE /* Model.xcdatamodeld */,
+				77BF4F7A1E0224A900473E3F /* Tweet.swift */,
 			);
 			path = TwitterFeed;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 			files = (
 				77219F3E1E01966800CEF2BE /* ComposeViewController.swift in Sources */,
 				777792E21E004282004BF261 /* LoginViewController.swift in Sources */,
+				77BF4F7B1E0224A900473E3F /* Tweet.swift in Sources */,
 				777792E01E004282004BF261 /* AppDelegate.swift in Sources */,
 				777793111E006E58004BF261 /* TimelineViewController.swift in Sources */,
 				77219F3C1E00891E00CEF2BE /* Model.xcdatamodeld in Sources */,

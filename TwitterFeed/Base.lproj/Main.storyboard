@@ -70,7 +70,7 @@
             </objects>
             <point key="canvasLocation" x="150" y="125"/>
         </scene>
-        <!--Root View Controller-->
+        <!--TwitterFeed-->
         <scene sceneID="wDh-xh-2aG">
             <objects>
                 <tableViewController id="Ayu-4P-VGA" customClass="TimelineViewController" customModule="TwitterFeed" customModuleProvider="target" sceneMemberID="viewController">
@@ -94,7 +94,7 @@
                             <outlet property="delegate" destination="Ayu-4P-VGA" id="B8p-ho-rqg"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="P0Z-qH-eJw">
+                    <navigationItem key="navigationItem" title="TwitterFeed" id="P0Z-qH-eJw">
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="U7d-V1-Rn1">
                             <connections>
                                 <action selector="composeButtonPressedWithButton:" destination="Ayu-4P-VGA" id="ihT-qd-dKT"/>
