@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		77219F3C1E00891E00CEF2BE /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 77219F3A1E00891E00CEF2BE /* Model.xcdatamodeld */; };
+		77219F3E1E01966800CEF2BE /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77219F3D1E01966800CEF2BE /* ComposeViewController.swift */; };
 		777792E01E004282004BF261 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777792DF1E004282004BF261 /* AppDelegate.swift */; };
 		777792E21E004282004BF261 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777792E11E004282004BF261 /* LoginViewController.swift */; };
 		777792E51E004282004BF261 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 777792E31E004282004BF261 /* Main.storyboard */; };
@@ -15,8 +16,11 @@
 		777792EA1E004282004BF261 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 777792E81E004282004BF261 /* LaunchScreen.storyboard */; };
 		777792F51E004282004BF261 /* TwitterFeedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777792F41E004282004BF261 /* TwitterFeedTests.swift */; };
 		777793001E004282004BF261 /* TwitterFeedUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777792FF1E004282004BF261 /* TwitterFeedUITests.swift */; };
-		7777930E1E004F55004BF261 /* OAuthiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7777930D1E004F55004BF261 /* OAuthiOS.framework */; };
 		777793111E006E58004BF261 /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777793101E006E58004BF261 /* TimelineViewController.swift */; };
+		77BF4F761E01EFF000473E3F /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77BF4F721E01EFF000473E3F /* Fabric.framework */; };
+		77BF4F771E01EFF000473E3F /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77BF4F731E01EFF000473E3F /* TwitterKit.framework */; };
+		77BF4F781E01EFF000473E3F /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 77BF4F741E01EFF000473E3F /* TwitterKitResources.bundle */; };
+		77BF4F791E01EFF000473E3F /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77BF4F751E01EFF000473E3F /* TwitterCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		77219F3B1E00891E00CEF2BE /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		77219F3D1E01966800CEF2BE /* ComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
 		777792DC1E004282004BF261 /* TwitterFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		777792DF1E004282004BF261 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		777792E11E004282004BF261 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -51,9 +56,12 @@
 		777792FB1E004282004BF261 /* TwitterFeedUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwitterFeedUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		777792FF1E004282004BF261 /* TwitterFeedUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterFeedUITests.swift; sourceTree = "<group>"; };
 		777793011E004282004BF261 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7777930D1E004F55004BF261 /* OAuthiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OAuthiOS.framework; path = TwitterFeed/OAuthiOS.framework; sourceTree = "<group>"; };
 		7777930F1E0052E0004BF261 /* TwitterFeed-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "TwitterFeed-Bridging-Header.h"; path = "TwitterFeed/TwitterFeed-Bridging-Header.h"; sourceTree = "<group>"; };
 		777793101E006E58004BF261 /* TimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
+		77BF4F721E01EFF000473E3F /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		77BF4F731E01EFF000473E3F /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
+		77BF4F741E01EFF000473E3F /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = "<group>"; };
+		77BF4F751E01EFF000473E3F /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterCore.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +69,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7777930E1E004F55004BF261 /* OAuthiOS.framework in Frameworks */,
+				77BF4F791E01EFF000473E3F /* TwitterCore.framework in Frameworks */,
+				77BF4F761E01EFF000473E3F /* Fabric.framework in Frameworks */,
+				77BF4F771E01EFF000473E3F /* TwitterKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,7 +96,10 @@
 			isa = PBXGroup;
 			children = (
 				7777930F1E0052E0004BF261 /* TwitterFeed-Bridging-Header.h */,
-				7777930D1E004F55004BF261 /* OAuthiOS.framework */,
+				77BF4F721E01EFF000473E3F /* Fabric.framework */,
+				77BF4F731E01EFF000473E3F /* TwitterKit.framework */,
+				77BF4F741E01EFF000473E3F /* TwitterKitResources.bundle */,
+				77BF4F751E01EFF000473E3F /* TwitterCore.framework */,
 				777792DE1E004282004BF261 /* TwitterFeed */,
 				777792F31E004282004BF261 /* TwitterFeedTests */,
 				777792FE1E004282004BF261 /* TwitterFeedUITests */,
@@ -110,6 +123,7 @@
 				777792DF1E004282004BF261 /* AppDelegate.swift */,
 				777792E11E004282004BF261 /* LoginViewController.swift */,
 				777793101E006E58004BF261 /* TimelineViewController.swift */,
+				77219F3D1E01966800CEF2BE /* ComposeViewController.swift */,
 				777792E31E004282004BF261 /* Main.storyboard */,
 				777792E61E004282004BF261 /* Assets.xcassets */,
 				777792E81E004282004BF261 /* LaunchScreen.storyboard */,
@@ -147,6 +161,7 @@
 				777792D81E004282004BF261 /* Sources */,
 				777792D91E004282004BF261 /* Frameworks */,
 				777792DA1E004282004BF261 /* Resources */,
+				77BF4F701E01EFB600473E3F /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -205,6 +220,7 @@
 				TargetAttributes = {
 					777792DB1E004282004BF261 = {
 						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 					777792EF1E004282004BF261 = {
@@ -244,6 +260,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77BF4F781E01EFF000473E3F /* TwitterKitResources.bundle in Resources */,
 				777792EA1E004282004BF261 /* LaunchScreen.storyboard in Resources */,
 				777792E71E004282004BF261 /* Assets.xcassets in Resources */,
 				777792E51E004282004BF261 /* Main.storyboard in Resources */,
@@ -266,11 +283,28 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		77BF4F701E01EFB600473E3F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run 67aeffb6d046196c6d6b643d6c92565fffcc55ad 984c5da86d19036e3d699957afc757267ce29c008b8d988caa04d2c3f9eab844";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		777792D81E004282004BF261 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77219F3E1E01966800CEF2BE /* ComposeViewController.swift in Sources */,
 				777792E21E004282004BF261 /* LoginViewController.swift in Sources */,
 				777792E01E004282004BF261 /* AppDelegate.swift in Sources */,
 				777793111E006E58004BF261 /* TimelineViewController.swift in Sources */,
@@ -428,14 +462,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/TwitterFeed",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = TwitterFeed/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.laurenjarrard.TwitterFeed;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -444,9 +481,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/TwitterFeed",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = TwitterFeed/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

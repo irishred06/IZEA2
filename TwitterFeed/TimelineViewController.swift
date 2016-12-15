@@ -7,28 +7,59 @@
 //
 
 import Foundation
+import UIKit
+import TwitterKit
 
-class TimelineViewController : UITableViewController {
-
-    var credentials:Dictionary<AnyHashable, Any>?
-    var request:OAuthIORequest?
+class TimelineViewController : TWTRTimelineViewController, ComposeViewControllerDelegate {
+    
+    @IBOutlet var compose:UIBarButtonItem?
+    
+    var session:TWTRSession?
+    var client:NSObject?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.hidesBackButton = true
         self.navigationController?.navigationBar.isHidden = false
         
-        //GET https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=ljarrard&count=2
+        client = TWTRAPIClient(userID: session!.userName)//TWTRAPIClient()
         
-        
-        //request!.get(<#T##resource: String!##String!#>, withParams: <#T##Any!#>, success: <#T##RequestSuccessBlock!##RequestSuccessBlock!##([AnyHashable : Any]?, String?, HTTPURLResponse?) -> Void#>)
-        
-        //request!.get("/1/statuses/user_timeline.json?screen_name=twitterapi&count=2") { (output, body, httpResponse) in
-        //    print("REQUEST")
-        //}
+        self.dataSource = TWTRUserTimelineDataSource(screenName: session!.userName, apiClient: client! as! TWTRAPIClient)
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    @IBAction func composeButtonPressed(button: UIBarButtonItem) {
+        let composer = TWTRComposer()
+    
+        composer.setImage(UIImage(named: "fabric"))
+        
+        // Called from a UIViewController
+        composer.show(from: self) { result in
+            if (result == TWTRComposerResult.cancelled) {
+                print("Tweet composition cancelled")
+            }
+            else {
+                print("Sending tweet!")
+                self.dataSource = TWTRUserTimelineDataSource(screenName: self.session!.userName, apiClient: self.client! as! TWTRAPIClient)
+            }
+        }
+        
+        //self.performSegue(withIdentifier: "composePopover", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "composePopover" {
+            let nav = segue.destination as! UINavigationController
+            let composeVC = nav.visibleViewController as! ComposeViewController
+            composeVC.delegate = self
+        }
+    }
+    
+    func dismiss() {
+        self.dismiss(animated: true) {
+        }
     }
 }

@@ -9,6 +9,5 @@
 #ifndef TwitterFeed_Bridging_Header_h
 #define TwitterFeed_Bridging_Header_h
 
-#import <OAuthiOS/OAuthiOS.h>
 
 #endif /* TwitterFeed_Bridging_Header_h */

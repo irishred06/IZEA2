@@ -68,6 +68,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="150" y="125"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="wDh-xh-2aG">
@@ -93,11 +94,98 @@
                             <outlet property="delegate" destination="Ayu-4P-VGA" id="B8p-ho-rqg"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="P0Z-qH-eJw"/>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="P0Z-qH-eJw">
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="U7d-V1-Rn1">
+                            <connections>
+                                <action selector="composeButtonPressedWithButton:" destination="Ayu-4P-VGA" id="ihT-qd-dKT"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="compose" destination="U7d-V1-Rn1" id="7pO-l3-syN"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eMG-bS-VzF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1183" y="126"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="V35-dT-GaG">
+            <objects>
+                <navigationController id="7ii-ba-7Gh" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AZ7-iC-Z7z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="2Zk-er-AmV" kind="relationship" relationship="rootViewController" id="Bdv-Mx-MpM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A4w-TV-v1S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1948" y="126"/>
+        </scene>
+        <!--Compose View Controller-->
+        <scene sceneID="Cbn-JS-3fY">
+            <objects>
+                <viewController id="2Zk-er-AmV" customClass="ComposeViewController" customModule="TwitterFeed" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TFh-Ed-csQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="hZm-e6-bhm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="O44-wU-6dc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jhN-Hm-yW6">
+                                <frame key="frameInset" minX="298" minY="623" width="77" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="submitButtonPressedWithButton:" destination="2Zk-er-AmV" eventType="touchDown" id="LNr-3Z-8mY"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What would you like to say..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CRT-2G-jRm">
+                                <frame key="frameInset" minX="28" minY="96" width="216" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fMO-jW-HBM">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="221" id="MY6-0V-HdV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fMO-jW-HBM" firstAttribute="top" secondItem="TFh-Ed-csQ" secondAttribute="bottom" constant="61" id="OH4-fu-E6c"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="fMO-jW-HBM" secondAttribute="leading" id="jnM-EF-bch"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fMO-jW-HBM" secondAttribute="trailing" id="ybM-Rs-V1i"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="BKL-K4-nF9">
+                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="wgo-r2-CRJ">
+                            <connections>
+                                <action selector="cancelButtonPressedWithButton:" destination="2Zk-er-AmV" id="OHw-oD-z9a"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="cancel" destination="wgo-r2-CRJ" id="y7v-nW-i1f"/>
+                        <outlet property="submit" destination="jhN-Hm-yW6" id="JVG-v6-yVy"/>
+                        <outlet property="text" destination="fMO-jW-HBM" id="XkJ-FH-bQd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2pb-ua-5te" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2629.5999999999999" y="124.58770614692655"/>
         </scene>
     </scenes>
 </document>
