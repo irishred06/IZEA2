@@ -70,6 +70,10 @@ class TimelineViewController : TWTRTimelineViewController, TWTRTimelineDelegate,
     func timeline(_ timeline: TWTRTimelineViewController, didFinishLoadingTweets tweets: [Any]?, error: Error?) {
         print("timeline")
         
+        guard let tweetArray = tweets, tweetArray.count > 0 else {
+            return
+        }
+        
         for tweet in tweets! {
             
             let request = self.managedObjectModel.fetchRequestFromTemplate(withName: "FetchTweetByTweetId", substitutionVariables: ["tweetId":(tweet as! TWTRTweet).tweetID])
@@ -86,7 +90,7 @@ class TimelineViewController : TWTRTimelineViewController, TWTRTimelineDelegate,
                     print("new tweet: \(t)")
                     
                     let author = (tweet as! TWTRTweet).author
-                    let userId = author.userID as! String
+                    let userId = author.userID 
                     
                     let request = self.managedObjectModel.fetchRequestFromTemplate(withName: "FetchUserByUserId", substitutionVariables: ["userId":userId])
                     do {
@@ -108,7 +112,7 @@ class TimelineViewController : TWTRTimelineViewController, TWTRTimelineDelegate,
                             
                             print("new user: \(user)")
                         } else {
-                            t.author = array[0] as! User
+                            t.author = array[0] as? User
                             print("previous user: \(array[0] as! User)")
                         }
                     } catch _ {
